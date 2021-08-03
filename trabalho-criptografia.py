@@ -1,6 +1,8 @@
-frase = input("Digite a frase")
-
+frase = input("Digite a frase: ")
 fraseArray = list(frase)
+
+chave = int(input("Digite os dois ultimos numeros do seu RU: "))
+chaveBit = format(chave, "08b")
 
 tamanho = len(fraseArray)
 
@@ -9,12 +11,15 @@ for x in range(tamanho):
     listaAscii.append(ord(fraseArray[x])) #string para ascii
 
 binario = []
-for i in range(tamanho):
-    binario.append(format(listaAscii[i], "08b")) #scii para binario
-
-converteAscii = []
 for x in range(tamanho):
-    converteAscii.append(chr(listaAscii[x]))  #de ascii para string
+    binario.append(format(listaAscii[x], "08b")) #scii para binario
+
+#Comparando a frase com a chave
+
+
+#converteAscii = []
+#for x in range(tamanho):
+#    converteAscii.append(chr(listaAscii[x]))  #de ascii para string
 
 
 print("Frase inicial:")
@@ -25,12 +30,7 @@ print(listaAscii)
 print("---------")
 print("De ascii para binario")
 print(binario)
-print("---------")
-print("Convertida de ascii")
-print(converteAscii)
-
-temp = "{0:b}".format(722)
-
-print(temp)
-
+#print("---------")
+#print("Convertida de ascii")
+#print(converteAscii)
 
