@@ -4,6 +4,7 @@ fraseArray = list(frase)
 chave = int(input("Digite os dois ultimos numeros do seu RU: "))
 chaveBit = format(chave, "08b")
 
+
 tamanho = len(fraseArray)
 
 listaAscii = []
@@ -14,7 +15,14 @@ binario = []
 for x in range(tamanho):
     binario.append(format(listaAscii[x], "08b")) #scii para binario
 
+cifra = []
 #Comparando a frase com a chave
+for x in range(tamanho):
+    for i in range(8):
+        if (binario[x][i] == chaveBit[i]):
+            cifra.append(0)
+        else:
+            cifra.append(1)
 
 
 #converteAscii = []
@@ -25,12 +33,12 @@ for x in range(tamanho):
 print("Frase inicial:")
 print(fraseArray)
 print("---------")
-print("Convertida em ascii")
-print(listaAscii)
+print("chaveBit")
+print(chaveBit)
 print("---------")
 print("De ascii para binario")
 print(binario)
-#print("---------")
-#print("Convertida de ascii")
-#print(converteAscii)
+print("---------")
+print("Cifra")
+print(cifra)
 
