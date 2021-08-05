@@ -22,9 +22,9 @@ for x in range(tamanho):
     teste.clear()
     for i in range(8):
         if (binario[x][i] == chaveBit[i]):
-            teste.append(0)
+            teste.append('0')
         else:
-            teste.append(1)
+            teste.append('1')
     cifra.append(teste)
 
 descripto = []
@@ -34,11 +34,10 @@ for x in range(tamanho):
     teste2.clear()
     for i in range(8):
         if (cifra[x][i] == chaveBit[i]):
-            teste2.append(1)
+            teste2.append('0')
         else:
-            teste2.append(0)
+            teste2.append('1')
     descripto.append(teste2)
-
 
 #converteAscii = []
 #for x in range(tamanho):
@@ -56,7 +55,11 @@ print(binario)
 print("---------")
 print("Cifra")
 print(cifra)
+for x in range(tamanho):
+    print(cifra[x])
 print("---------")
 print("Descriptografado")
 print(descripto)
+for x in range(tamanho):
+    print(descripto[x])
 

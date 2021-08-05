@@ -18,3 +18,11 @@ print(teste3[0][2])
 teste3.clear()
 print(teste3)
 print(teste4)
+
+for i in range(8):
+    print(i)
+
+
+
+
+
