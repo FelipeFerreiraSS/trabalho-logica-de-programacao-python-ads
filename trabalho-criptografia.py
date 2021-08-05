@@ -16,13 +16,28 @@ for x in range(tamanho):
     binario.append(format(listaAscii[x], "08b")) #scii para binario
 
 cifra = []
-#Comparando a frase com a chave
+teste = []
+#Criptografando a frase com a chave
 for x in range(tamanho):
+    teste.clear()
     for i in range(8):
         if (binario[x][i] == chaveBit[i]):
-            cifra.append(0)
+            teste.append(0)
         else:
-            cifra.append(1)
+            teste.append(1)
+    cifra.append(teste)
+
+descripto = []
+teste2 = []
+#Descriotografado a frase com a chave
+for x in range(tamanho):
+    teste2.clear()
+    for i in range(8):
+        if (cifra[x][i] == chaveBit[i]):
+            teste2.append(1)
+        else:
+            teste2.append(0)
+    descripto.append(teste2)
 
 
 #converteAscii = []
@@ -41,4 +56,7 @@ print(binario)
 print("---------")
 print("Cifra")
 print(cifra)
+print("---------")
+print("Descriptografado")
+print(descripto)
 
